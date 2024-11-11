@@ -26,13 +26,13 @@ public class EjemploRegistraController {
 	@Autowired
 	private EjemploService ejemploService;
 	
-	@GetMapping
-	public ResponseEntity<List<Ejemplo>> lista(){
+	@GetMapping("/listaEjemplo")
+	public List<Ejemplo> lista(){
 		List<Ejemplo> lstSalida = ejemploService.listaEjemplo();
-		return ResponseEntity.ok(lstSalida);
+		return lstSalida;
 	}
 
-	@PostMapping
+	@PostMapping("/registraEjemplo")
 	public ResponseEntity<?> registra(@RequestBody Ejemplo objEjemplo){
 		HashMap<String, Object> salida = new HashMap<>();
 		objEjemplo.setFechaRegistro(new Date());

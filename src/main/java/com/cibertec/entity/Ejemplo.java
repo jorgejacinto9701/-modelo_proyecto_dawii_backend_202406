@@ -75,3 +75,10 @@ public class Ejemplo {
 	@JoinColumn(name = "idUsuarioActualiza")
 	private Usuario usuarioActualiza;
 }
+
+
+
+
+
+
+
