@@ -20,7 +20,7 @@ import com.cibertec.util.AppSettings;
 
 @RestController
 @RequestMapping("/url/ejemplo")
-@CrossOrigin(AppSettings.URL_CROSS_ORIGIN)
+@CrossOrigin(origins = AppSettings.URL_CROSS_ORIGIN)
 public class EjemploRegistraController {
 
 	@Autowired
